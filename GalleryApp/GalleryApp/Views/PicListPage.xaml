@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GalleryApp.Views.PicListPage">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical" HorizontalOptions="CenterAndExpand">
+            <ListView x:Name="filesList" ItemsSource="{Binding Pictures}" SelectedItem="{Binding SelectedItem}" >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ImageCell
+                                    ImageSource="{Binding Image}"
+                                    Text="{Binding Name}"
+                                    TextColor="DodgerBlue"
+                                    DetailColor="Gray"
+                        />
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <Button Text="Delete" Command="{Binding  DeletePictureCommand}" CommandParameter="{Binding SelectedItem}" />
+            <Button Text="Show" Command="{Binding  ShowPictureCommand}" CommandParameter="{Binding SelectedItem}" />
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>

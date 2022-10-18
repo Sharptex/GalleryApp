@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GalleryApp.Views.MainPage">
+
+    <StackLayout VerticalOptions="Center"  HorizontalOptions="Center"  x:Name="stackLayout">
+        <Entry x:Name="pin" IsPassword="True" MaxLength="4" Placeholder="****" FontSize="Title" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" 
+               TextChanged="pin_TextChanged" />
+        <Button x:Name="regButton" Text="Register" Clicked="regButton_ClickedAsync" />
+        <Button x:Name="loginButton" Text="Login" Clicked="loginButton_ClickedAsync" />
+        <Label x:Name="infoMessage" FontSize="Medium"  Padding="30,10,30,10" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="Red"/>
+    </StackLayout>
+
+</ContentPage>
